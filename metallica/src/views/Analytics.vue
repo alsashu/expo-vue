@@ -292,8 +292,7 @@ onMounted(() => {
           <div class="h-64">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie :data="nodeTypeDistribution" cx="50%" cy="50%" outerRadius={80} dataKey="value" label={({ name,
-                  percent })=> `${name} ${(percent * 100).toFixed(0)}%`}
+                <Pie :data="nodeTypeDistribution" cx="50%" cy="50%" :outer-radius="80" data-key="value" :label="(entry) => `${entry.name} ${(entry.percent * 100).toFixed(0)}%`"
                   >
                   <Cell v-for="(entry, index) in nodeTypeDistribution" :key="`cell-${index}`" :fill="entry.color" />
                 </Pie>

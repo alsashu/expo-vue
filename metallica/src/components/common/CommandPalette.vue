@@ -300,21 +300,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
-:deep(.command-palette-dialog) {
-  .el-dialog {
-    margin-top: 8vh !important;
-    border-radius: 12px;
-    overflow: hidden;
-  }
+:deep(.command-palette-dialog .el-dialog) {
+  margin-top: 8vh !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-  .el-dialog__header {
-    padding: 0;
-    margin: 0;
-  }
+:deep(.command-palette-dialog .el-dialog__header) {
+  padding: 0;
+  margin: 0;
+}
 
-  .el-dialog__body {
-    padding: 0;
-  }
+:deep(.command-palette-dialog .el-dialog__body) {
+  padding: 0;
 }
 
 .command-palette {

@@ -66,6 +66,10 @@ const storageUsedMB = computed(() => {
   return (storageStats.value.estimatedSize / 1024 / 1024).toFixed(2)
 })
 
+const appVersion = computed(() => {
+  return import.meta.env.VITE_APP_VERSION || '1.0.0'
+})
+
 // Methods
 const loadStorageStats = async () => {
   try {
@@ -463,7 +467,7 @@ loadStorageStats()
                   Smart Railway Network Designer
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400">
-                  Version {{ import.meta.env.VITE_APP_VERSION || '1.0.0' }}
+                  Version {{ appVersion }}
                 </p>
               </div>
             </div>

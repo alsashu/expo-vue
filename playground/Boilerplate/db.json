@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "id": 1756389817168,
+      "name": "Test Item 1756389817168",
+      "category": "Electronics",
+      "quantity": 10,
+      "unitPrice": 99.99,
+      "status": "in-stock",
+      "updatedAt": "2025-08-28T14:03:37.168Z"
+    },
+    {
+      "name": "New Item 19:33:45",
+      "category": "General",
+      "quantity": 10,
+      "unitPrice": 25.99,
+      "status": "in-stock",
+      "id": 1756389825613,
+      "updatedAt": "2025-08-28T14:03:45.613Z"
+    },
+    {
+      "name": "New Item 19:33:47",
+      "category": "General",
+      "quantity": 10,
+      "unitPrice": 25.99,
+      "status": "in-stock",
+      "id": 1756389827367,
+      "updatedAt": "2025-08-28T14:03:47.367Z"
+    }
+  ],
+  "diagrams": {
+    "main": {
+      "id": "main",
+      "nodes": [
+        {
+          "key": "supplier1",
+          "text": "Tech Supplier",
+          "category": "Supplier",
+          "loc": "0 0"
+        },
+        {
+          "key": "item1",
+          "text": "Laptops",
+          "category": "Item",
+          "loc": "200 0"
+        },
+        {
+          "key": "item2",
+          "text": "Mice",
+          "category": "Item",
+          "loc": "200 100"
+        },
+        {
+          "key": "consumer1",
+          "text": "Retail Store",
+          "category": "Consumer",
+          "loc": "400 50"
+        },
+        {
+          "key": "supplier2",
+          "text": "Office Supplier",
+          "category": "Supplier",
+          "loc": "0 200"
+        },
+        {
+          "key": "item3",
+          "text": "Chairs",
+          "category": "Item",
+          "loc": "200 200"
+        }
+      ],
+      "links": [
+        {
+          "from": "supplier1",
+          "to": "item1"
+        },
+        {
+          "from": "supplier1",
+          "to": "item2"
+        },
+        {
+          "from": "item1",
+          "to": "consumer1"
+        },
+        {
+          "from": "item2",
+          "to": "consumer1"
+        },
+        {
+          "from": "supplier2",
+          "to": "item3"
+        },
+        {
+          "from": "item3",
+          "to": "consumer1"
+        }
+      ]
+    }
+  }
+}

@@ -7,8 +7,8 @@ import { useRailwayStore } from '@/stores/railway'
 import { useUIStore } from '@/stores/ui'
 import { Icon } from '@iconify/vue'
 import GridToolbar from '@/components/grid/GridToolbar.vue'
-import GridFilters from '@/components/grid/GridFilters.vue'
-import GridStats from '@/components/grid/GridStats.vue'
+import GridFilter from '@/components/grid/GridFilter.vue'
+import GridStates from '@/components/grid/GridStates.vue'
 
 const router = useRouter()
 const railwayStore = useRailwayStore()
@@ -260,13 +260,13 @@ watch(() => uiStore.isDarkMode, () => {
 
       <!-- Filters Panel -->
       <Transition name="slide-down">
-        <GridFilters v-if="showFilters" :entity-type="currentEntityType" @apply-filter="currentGrid.applyFilter"
+        <GridFilter v-if="showFilters" :entity-type="currentEntityType" @apply-filter="currentGrid.applyFilter"
           @clear-filters="currentGrid.clearFilters" />
       </Transition>
 
       <!-- Stats Panel -->
       <Transition name="slide-down">
-        <GridStats v-if="showStats" :entity-type="currentEntityType" />
+        <GridStates v-if="showStats" :entity-type="currentEntityType" />
       </Transition>
 
       <!-- Grid Container -->
@@ -367,6 +367,6 @@ watch(() => uiStore.isDarkMode, () => {
   --ag-selected-row-background-color: theme('colors.blue.900');
   --ag-background-color: theme('colors.gray.800');
   --ag-foreground-color: theme('colors.gray.100');
-  --ag-odd-row-background-color: theme('colors.gray.750');
+  --ag-odd-row-background-color: theme('colors.gray.700');
 }
 </style>

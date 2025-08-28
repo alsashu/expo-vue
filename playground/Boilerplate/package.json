@@ -1,0 +1,35 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "api": "json-server --watch db.json --port 3000",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ag-grid-community": "^31.0.3",
+    "ag-grid-vue3": "^31.0.3",
+    "axios": "^1.6.5",
+    "dexie": "^3.2.4",
+    "gojs": "^3.0.2",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "json-server": "^0.17.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.11",
+    "vite-plugin-pwa": "^0.17.4",
+    "vue-tsc": "^1.8.25",
+    "workbox-window": "^7.0.0"
+  }
+}

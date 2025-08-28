@@ -151,6 +151,10 @@ export const useUIStore = defineStore('ui', {
       document.documentElement.classList.toggle('dark', enabled)
     },
 
+    toggleTheme() {
+      this.setDarkMode(!this.isDarkMode)
+    },
+
     updateGridTheme() {
       this.gridSettings.theme = this.isDarkMode ? 'ag-theme-alpine-dark' : 'ag-theme-alpine'
     },
